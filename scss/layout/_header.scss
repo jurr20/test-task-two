@@ -1,0 +1,129 @@
+
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+header{
+	width:100%;
+	min-width: $min-width;
+	text-align:left;
+	order: 1;
+	-webkit-order: 1;
+	padding: 20px 0px;
+	background:rgba(255, 255, 255, 0.9);
+	.wrapper{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:after{
+			display: none;
+		}
+	}
+}
+.column-nav{
+	position: relative;
+}
+.block-logo{
+	display: inline-block;
+	vertical-align: middle;
+	img{
+		padding-right: 16%;
+	}
+}
+.main-nav{
+	display: inline-block;
+	vertical-align: middle;
+}
+.main-nav-list__link {
+	font-size: 18px;
+	padding: 5px 13px;
+	@include transition(0.2s);
+	&:hover{
+		color:#888686;
+	}
+}
+.block-multilang{
+	display: inline-block;
+	vertical-align: middle;
+}
+.multilang-list{
+	font-size: 0;
+}
+.multilang-list__item{
+	@include transition(0.2s);
+	border: 1px solid transparent;
+	padding: 5px;
+	font-size: 14px;
+	margin-left: -1px;
+}
+
+.multilang-list__item.active,
+.multilang-list__item:hover{
+	border: 1px solid #b8b8b4;
+	cursor: pointer;
+}
+.secondary-nav{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 31px;
+}
+.secondary-nav-list__link {
+	padding: 5px 6px;
+	@include transition(0.2s);
+	&:hover{
+		color:#888686;
+	}
+}
+.secondary-nav-list__link:last-child {
+	padding-right: 0;
+}
+
+
+.menu-mini{
+	a{
+		display: block;
+		padding:5px 0;
+		text-align: center;
+		&:hover{
+			background:#f2f2f2;
+		}
+	}
+	&__menu{
+		background:#fff;
+		position: absolute;
+		top: 100%;
+		display: none;
+		width: 100%;
+		z-index:101;
+		padding:10px 0;
+	}
+	&__menu.open{
+		display: block;
+	}
+	.multilang-list{
+		text-align: center;
+		padding-top: 10px;
+	}
+	.navbar__button {
+		float: right;
+		font-size: 20px;
+		background: transparent;
+		display: none;
+		@include transition(0.2s);
+		&:hover{
+			color: #535252;
+		}
+	}
+}
+@media screen and (max-width: 1320px) {
+	header .wrapper {flex-direction: column;}
+}
+@media screen and (max-width: 991px) {
+	header .wrapper {display: block;}
+	.main-nav{display: none;}
+	.secondary-nav{display: none;}
+	.block-multilang{display: none;}
+	.block-logo{float: left;}
+	.menu-mini .navbar__button {display: block;}
+}

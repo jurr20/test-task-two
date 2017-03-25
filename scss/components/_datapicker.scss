@@ -1,0 +1,32 @@
+/*     BEGIN DATEPICKER    */
+.ui-datepicker .ui-datepicker-next-hover{
+  right: 2px;
+  top:2px;
+  cursor: pointer;
+}
+.ui-datepicker .ui-datepicker-prev-hover{
+  left: 2px;
+  top:2px;
+  cursor: pointer;
+}
+.ui-icon.ui-icon-circle-triangle-e:before{
+  content:">";
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  font-size: 18px;
+  color: #333;
+  text-indent:0;
+  font-weight: normal;
+}
+.ui-icon.ui-icon-circle-triangle-w:before{
+  content:"<";
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  font-size: 18px;
+  color: #333;
+  text-indent:0;
+  font-weight: normal;
+}
+/*     END DATEPICKER    */

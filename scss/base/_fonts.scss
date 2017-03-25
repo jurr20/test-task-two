@@ -1,0 +1,90 @@
+@font-face {
+  font-family:'Roboto';
+  src: url('../fonts/Roboto Light.eot');
+  src: url('../fonts/Roboto Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto Light.woff') format('woff'), url('../fonts/Roboto Light.ttf') format('truetype'), url('../fonts/Roboto Light.svg#Roboto Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;}
+@font-face {
+  font-family:'Roboto';
+  src: url('../fonts/Roboto.eot');
+  src: url('../fonts/Roboto.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto.woff') format('woff'), url('../fonts/Roboto.ttf') format('truetype'), url('../fonts/Roboto.svg#Roboto') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;}
+@font-face {
+  font-family:'Roboto';
+  src: url('../fonts/Roboto Medium.eot');
+  src: url('../fonts/Roboto Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto Medium.woff') format('woff'), url('../fonts/Roboto Medium.ttf') format('truetype'), url('../fonts/Roboto Medium.svg#Roboto Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;}
+@font-face {
+  font-family:'Roboto';
+  src: url('../fonts/Roboto Bold.eot');
+  src: url('../fonts/Roboto Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto Bold.woff') format('woff'), url('../fonts/Roboto Bold.ttf') format('truetype'), url('../fonts/Roboto Bold.svg#Roboto Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;}
+
+
+@font-face {
+  font-family: 'love-but';
+  src:  url('../fonts/love-but.eot?w7fzvk');
+  src:  url('../fonts/love-but.eot?w7fzvk#iefix') format('embedded-opentype'),
+    url('../fonts/love-but.ttf?w7fzvk') format('truetype'),
+    url('../fonts/love-but.woff?w7fzvk') format('woff'),
+    url('../fonts/love-but.svg?w7fzvk#love-but') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'love-but' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-men-child:before {
+  content: "\e900";
+}
+.icon-date:before {
+  content: "\e901";
+}
+.icon-fb:before {
+  content: "\e902";
+}
+.icon-instagram:before {
+  content: "\e903";
+}
+.icon-people_1:before {
+  content: "\e904";
+}
+.icon-people_2:before {
+  content: "\e905";
+}
+.icon-people_3:before {
+  content: "\e906";
+}
+.icon-tel:before {
+  content: "\e907";
+}
+.icon-vk:before {
+  content: "\e909";
+}
+.icon-button-menu:before {
+  content: "\e908";
+}
