@@ -7,7 +7,7 @@
 footer{
 	text-align:left;
 	width:100%;
-	padding: 7px 0 15px;
+	padding: 15px 0;
 	min-width: $min-width;
 	order: 3;
 	-webkit-order: 3;
@@ -23,12 +23,13 @@ footer{
 		margin-right: 19px;
 		font-size: 18px;
 		i{
-			border:1px solid #333;
+			border: 1px solid #333;
 			border-radius: 50%;
 			width: 30px;
-			height: 30px;
+			height: 31px;
 			display: inline-block;
-			line-height: 28px;
+			font-size: 14px;
+			line-height: 31px;
 			text-align: center;
 			margin-right: 5px;
 		}
@@ -58,8 +59,16 @@ footer{
 			}
 		}
 		i{
-			font-size: 19px;
-			line-height: 30px;
+			line-height: 32px;
+		}
+		.icon-fb{
+			font-size: 20px;
+		}
+		.icon-vk {
+			font-size: 13px;
+		}
+		.icon-instagram{
+			font-size: 15px;
 		}
 	}
 }

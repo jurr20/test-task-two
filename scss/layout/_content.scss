@@ -23,8 +23,8 @@
 }
 .wrapper{
 	min-width: $min-width;
-	max-width: 1307px;
-	padding: 0 40px 0 40px;
+	max-width: 1920px;
+	padding: 0 40px;
 	margin: 0 auto;
 	position: relative;
 	box-sizing: content-box;
@@ -75,6 +75,7 @@ input{
 }
 img {
 	max-width: 100%;
+	height: auto;
 }
 button{
   border:none;
@@ -86,9 +87,8 @@ button{
 .text-center{text-align: center!important}
 .text-right{text-align: right!important}
 .nowrap{white-space: nowrap!important;}
-.text-style{
-	font-weight: 500;
-}
+.text-style{font-weight: 500;}
+.no-wrap{white-space: nowrap;}
 
 /* loader */
 .loaded .main-wrapper{visibility:hidden;}
@@ -124,20 +124,23 @@ button{
 .block-rooms{
 	.title{
 		font-weight: 500;
-		padding: 24px 0 20px;
+		padding: 24px 0 10px;
 	}
 }
 .rooms-list{
+	margin-left: -10px;
+	margin-right: -10px;
 	padding-right: 6%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	&__img{
 		margin-bottom: 5px;
+		width: 100%;
 	}
 	&__item{
 		width: 33%;
-		margin-bottom: 15px;
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 -4px 0 0;
+		padding: 10px 10px 5px 10px;
 	}
 }
 .category-icon{
@@ -283,7 +286,7 @@ button{
 .number-of-people{
 	.jq-selectbox__select {
 		width: 64px;
-		padding: 7px 25px 0 15px;
+		padding: 7px 25px 7px 15px;
 	}
 }
 .box-datepicker{
@@ -308,18 +311,17 @@ button{
 	}
 	.box-field__input{
 		position: relative;
-		&:after{
-			content:"\e901";
-			font-family: "love-but";
+		i{
 			position: absolute;
-			right: 5px;
+			right: 4px;
 			top: 50%;
-			font-size: 18px;
+			font-size: 26px;
 			transform:translate(0, -50%);
 			-moz-transform:translate(0, -50%);
 			-webkit-transform:translate(0, -50%);
 			-ms-transform:translate(0, -50%);
 			-o-transform:translate(0, -50%);
+			cursor: pointer;
 		}
 	}
 }
@@ -355,8 +357,8 @@ button{
 		margin-bottom: 31px;
 	}
 	label{
-		padding: 5px 10px 5px 25px;
-		margin-left: -20px;
+		padding: 5px 10px 5px 30px;
+		margin-left: -25px;
 		@include transition(0.2s);
 	}
 	.jq-checkbox.checked+label{
@@ -384,9 +386,27 @@ button{
 }
 
 
-.slick-slider {
+.main-carousel.slick-slider {
 	position: fixed;
 	z-index: -1;
+	width: 100%;
+	height: 100%;
+	.slick-list, .slick-track, .slick-slide{
+		height: 100%;
+	}
+}
+.main-carousel{
+	&__slider{
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		&.one{
+			background:url(../img/carousel_img1.jpg);
+		}
+		&.two{
+			background:url(../img/carousel_img2.jpg);
+		}
+	}
 }
 
 
@@ -403,29 +423,36 @@ button{
 	.wrapper{padding: 0 25px 0 25px;}
 }
 @media screen and (max-width: 1100px) {
-	.block-description{width: 100%; margin-bottom: 5%;}
+	.box-field__column:first-child{float: none; margin-bottom: 20px;}
+	.box-field__column:last-child{float: none;}
+	.box-field__column:last-child label{min-width: 107px; margin-right: 0;}
+	.box-datepicker .box-field__column:last-child label{min-width: 107px;margin-right: 0; text-align: left;}
+	.block-form .half-width{width: auto;}
+	.box-datepicker .box-field__column {width: 100%;margin-bottom: 20px;}
+	.box-datepicker .box-field__column:last-child {margin-bottom: 0px;}
+}
+@media screen and (max-width: 991px) {
+	.block-description{width: 100%; margin-bottom: 5%; padding-right: 0;}
 	.block-form{width: 70%;float: none; margin: 0 auto;}
 	.rooms-list{padding-right: 0;}
 }
-@media screen and (max-width: 820px){
-	.block-form{width: 100%;padding: 0;}
-}
 @media screen and (max-width: 650px) {
+	.block-form{width: 100%;padding: 0;}
 	.wrapper{padding: 0 15px 0 15px;}
-	.rooms-list__item{width: 50%; padding:0 10px;}
+	.rooms-list__item{width: 50%;}
 	.wrapper{box-sizing:border-box;}
+	.block-service__list {padding-left: 13px;}
 }
 @media screen and (max-width: 500px) {
-	.block-form{text-align: center;}
-	.rooms-list__item{width: 100%; padding:0; text-align: center;}
-	.box-datepicker .box-field__column {width: 100%;margin-bottom: 20px;}
-	.box-datepicker .box-field__column:last-child {margin-bottom: 0px;}
-	.box-field__column:first-child{float: none; margin-bottom: 20px;}
-	.box-field__column:last-child{float: none;}
-	.box-field__column:last-child label{min-width: 107px;margin-right: 0;}
-	.block-form .half-width{width: auto;}
+	.rooms-list__item{padding:10px 5px;}
+	.block-form .block-service{text-align: center;}
+	.form-order__sum{text-align: center;}
+	.holder-btn{text-align: center;}
 	.block-form .text-style {font-size: 20px;}
 	.btn{height: 35px;font-weight: 400;}
+}
+@media screen and (max-width: 400px) {
+	.rooms-list__item{width: 100%; padding:10px; text-align: center;}
 }
 
 
